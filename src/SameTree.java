@@ -11,6 +11,8 @@ import java.util.List;
  */
 public class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null || q == null) return (p == q);
+
         List<Integer> pList = new ArrayList<>();
         List<Integer> qList = new ArrayList<>();
         Object[] i = dfs(p, pList).toArray();
@@ -18,7 +20,7 @@ public class SameTree {
         return Arrays.equals(dfs(p, pList).toArray(), dfs(q, qList).toArray());
     }
 
-    public List<Integer> dfs(TreeNode root, List<Integer> res){
+    public List<Integer> dfs(TreeNode root, List<Integer> res) {
         if (root == null) {
             return res;
         }

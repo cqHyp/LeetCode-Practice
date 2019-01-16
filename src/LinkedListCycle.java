@@ -16,6 +16,7 @@ public class LinkedListCycle {
             if (temp == rate){
                 return true;
             }
+
         }
         return false;
     }
