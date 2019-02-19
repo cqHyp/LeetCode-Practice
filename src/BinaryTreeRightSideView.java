@@ -5,11 +5,11 @@ import java.util.List;
 
 /**
  * @Author: Poldi
- * @Date: 2018/3/30 下午4:20
- * @Description: 515. Find Largest Value in Each Tree Row
+ * @Date: 2019-02-19 10:25
+ * @Description: 199. Binary Tree Right Side View
  */
-public class FindLargestValueinEachTreeRow {
-    public List<Integer> largestValues(TreeNode root) {
+public class BinaryTreeRightSideView {
+    public List<Integer> rightSideView(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         dfs(root, res, 0);
         return res;
@@ -17,14 +17,10 @@ public class FindLargestValueinEachTreeRow {
 
     public static void dfs(TreeNode node, List<Integer> res, int deepth) {
         if (node == null) return;
-
-        if (deepth == res.size()) {
+        if (deepth == res.size()){
             res.add(node.val);
-        } else {
-            res.set(deepth, Math.max(res.get(deepth), node.val));
         }
-
-        dfs(node.left, res, deepth + 1);
         dfs(node.right, res, deepth + 1);
+        dfs(node.left, res, deepth + 1);
     }
 }
