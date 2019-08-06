@@ -26,7 +26,7 @@ public class UniqueEmailAddresses {
     }
 
     public static void main(String[] args) {
-        String[] strings = {"test.email+alex@leetcode.com", "test.e.mail+bob.cathy@leetcode.com", "testemail+david@lee.tcode.com"};
+        String[] strings = {"testemail@leetcode.com", "testemail1@leetcode.com", "testemail+david@lee.tcode.com"};
         UniqueEmailAddresses.numUniqueEmails(strings);
     }
 }
